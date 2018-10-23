@@ -1,0 +1,23 @@
+.btn{
+    margin-right:3%;
+    padding:1%;
+    font-size: 12px;
+}
+
+.decorateText{
+    text-decoration: line-through;
+    color:#bbb
+}
+
+th{
+    font-size:17px;
+}
+
+td{
+    font-size:16px;
+}
+
+.hide{
+    visibility: hidden !important;
+    display: inherit !important;
+}

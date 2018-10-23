@@ -1,0 +1,22 @@
+
+<h1>My Tasks</h1>
+<p *ngIf="this.getData().length==0">You do not have any tasks. Create your first task now!</p>
+
+<table *ngIf="this.getData().length!=0" class="table">
+    <thead>
+      <tr>
+        <th style="width:10%">#</th>
+        <th>Description</th>
+        <th>Timestamp</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr hoverHide *ngFor="let task of this.getData(); index as i">
+        <td [ngClass]="{'decorateText': task.taskCompleted}" style="width:10%">{{i+1}}</td>
+        <td [ngClass]="{'decorateText': task.taskCompleted}" style="width:40%">{{task.taskDescription}}</td>
+        <td [ngClass]="{'decorateText': task.taskCompleted}" style="width:25%">{{task.timeStamp | date :'M/d/yyyy, h:mm:ss a'}}</td>
+        <td style="width:25%;min-width:25%;opacity:0"><button (click)="taskIsCompleted(i)" type="button" class="btn btn-primary" [ngClass]="{'hide': task.taskCompleted}">Mark as Done</button><button (click)="removeTask(task.taskId)" type="button" class="btn btn-danger">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
