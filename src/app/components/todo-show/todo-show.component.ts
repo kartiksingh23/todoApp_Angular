@@ -14,14 +14,14 @@ export class TodoShowComponent implements OnInit {
   ngOnInit() {
   }
 
-  public getData(){
+  public getData(){ //get list of all the tasks
     return this.data.getTaskList();
   }
 
-  public removeTask(taskId:number){
+  public removeTask(taskId:number){ //remove the task having a certain taskid 
     this.data.removeTask(taskId);
   }
-  public taskIsCompleted(index:number){
+  public taskIsCompleted(index:number){ //if task is completed it sets the value of the property 'taskCompleted' to true
     this.getData()[index].taskCompleted = true;
   }
 }

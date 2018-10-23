@@ -9,11 +9,11 @@ export class HoverHideDirective {
    }
 
   @HostListener('mouseenter') onMouseEnter() {
-    this.hover(true);
+    this.hover(true); //called when the mouse hovers above the element
   }
 
   @HostListener('mouseleave') onMouseLeave() {
-    this.hover(false);
+    this.hover(false); //called when the mouse hovers away from the element
   }
 // Event method to be called on mouse enter and on mouse leave
   public hover(visible: boolean){

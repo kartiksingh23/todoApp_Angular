@@ -28,7 +28,7 @@ import { TaskdataService } from './services/taskdata.service';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [TaskdataService],
+  providers: [TaskdataService], 
   bootstrap: [AppComponent]
 })
 export class AppModule { }
