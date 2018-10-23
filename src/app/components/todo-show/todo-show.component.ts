@@ -1,7 +1,7 @@
 
 
 import { Component, OnInit } from '@angular/core';
-import {TaskdataService} from '../taskdata.service'
+import {TaskdataService} from '../../services/taskdata.service'
 
 @Component({
   selector: 'app-todo-show',
